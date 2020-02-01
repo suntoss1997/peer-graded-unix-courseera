@@ -1,6 +1,7 @@
-all: guessinggame.sh
-	echo "##The Unix Workbench Assignment..." > README.md
-	echo "Time of make execution is: $(date) " >> README.md
-	echo "NO of lines in guessinggame.sh: " >> README.md
-	cat guessinggame.sh | wc -l >> README.md
+all: README.md
+
+README.md:
+	echo '#PEER GRADED ASSIGNMENT - UNIX WORKBENCH\n' > README.md
+	echo '* Time of make execution : $(shell date +%Y-%m-%d:%H:%M:%S)\n' >> README.md
+	echo '* Number of lines in guessinggame:  $(shell wc -l < guessinggame.sh)\n' >> README.md
 
