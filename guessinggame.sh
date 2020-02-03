@@ -15,8 +15,11 @@ do
 	if [[ $response -gt $files ]]
 	then
 	echo "Too high"
-	else 
-	echo  "Too low"
+	elif [[ $response -lt $files ]]
+	then 
+	echo "Too low" 
+        else
+        echo "Number is not valid"
 	fi
 	prompt
 done
