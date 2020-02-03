@@ -5,7 +5,7 @@ echo "Congratulations, You guessed it right !"
 function prompt {
 echo "Enter the number of files in the current directory:"
 read response
- files=$(ls | wc -l)
+ files=$(ls -a | wc -l)
 }
 
 prompt
@@ -21,3 +21,4 @@ do
 	prompt
 done
 congrats
+
