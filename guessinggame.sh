@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/bash
+# File: guessinggame.sh
 function congrats {
 echo "Congratulations, You guessed it right !"
 }
@@ -6,7 +7,7 @@ echo "Congratulations, You guessed it right !"
 function prompt {
 echo "Enter the number of files in the current directory:"
 read response
- files=$(ls -a | wc -l)
+ files=$(ls -al | wc -l)
 }
 
 prompt
