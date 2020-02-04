@@ -11,17 +11,17 @@ read response
 prompt
 
 while [[ $response -ne $files ]]
-do
-	if [[ $response -gt $files ]]
-	then
-	echo "Too high"
-	elif [[ $response -lt $files ]]
-	then 
-	echo "Too low" 
-        else
-        echo "Number is not valid"
-	fi
-	prompt
-done
+ do
+       if ! [[ $response =~ ^[0-9]+$ ]]
+       then
+       echo "The result is not the valid number"
+       elif [[ $response -gt $files ]]
+       then
+       echo  "It is too high"
+       else
+       echo "It is too low"
+       fi
+       prompt
+ done
 congrats
 
