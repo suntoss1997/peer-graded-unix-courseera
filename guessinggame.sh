@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 function congrats {
 echo "Congratulations, You guessed it right !"
 }
